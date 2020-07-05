@@ -1,0 +1,120 @@
+<p>addrecord works!</p>
+<div class="container">
+  <div class="form">
+
+
+    <div class="form-group">
+      <div class="input-group-prepend">
+        <label for="name" class="float-left mr-5">Patient name</label>
+        <div class="float-right pull-right">
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="nameprivacy" class="form-check-input float-right" type="radio" name="patient-name-privacy" value="private">
+            <label class="form-check-label" for="privacy">private</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="nameprivacy" class="form-check-input" type="radio" name="patient-name-privacy" value="non-private">
+            <label class="form-check-label" for="privacy">Non-private</label>
+          </div>
+        </div>
+      </div>
+      <input [(ngModel)]="name" class="form-control" type="text" name="name">
+    </div>
+
+    <div class="form-group">
+      <div class="input-group-prepend">
+        <label for="name" class="float-left mr-5">Patient age</label>
+        <div class="float-right pull-right">
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="ageprivacy" class="form-check-input float-right" type="radio" name="patient-age-privacy" value="private">
+            <label class="form-check-label" for="privacy">private</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="ageprivacy" class="form-check-input" type="radio" name="patient-age-privacy" value="non-private">
+            <label class="form-check-label" for="privacy">Non-private</label>
+          </div>
+        </div>
+      </div>
+      <input [(ngModel)]="age" class="form-control" type="text" name="name">
+    </div>
+
+    <div class="form-group">
+      <div class="input-group-prepend">
+        <label for="name" class="float-left mr-5">Patient gender</label>
+        <div class="float-right pull-right">
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="genderprivacy" class="form-check-input float-right" type="radio" name="patient-gender-privacy" value="private">
+            <label class="form-check-label" for="privacy">private</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="genderprivacy" class="form-check-input" type="radio" name="patient-gender-privacy" value="non-private">
+            <label class="form-check-label" for="privacy">Non-private</label>
+          </div>
+        </div>
+      </div>
+      <div >
+        <div class="form-check form-check-inline">
+          <input [(ngModel)]="gender" class="form-check-input float-right" type="radio" name="patient-gender" value="male">
+          <label class="form-check-label" for="privacy">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input [(ngModel)]="gender" class="form-check-input" type="radio" name="patient-gender" value="female">
+          <label class="form-check-label" for="privacy">Female</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group-prepend">
+        <label for="name" class="float-left mr-5">DateOfuplaod</label>
+        <div class="float-right pull right">
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="dateprivacy" class="form-check-input float-right" type="radio" name="date-privacy" value="private">
+            <label class="form-check-label" for="privacy">private</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="dateprivacy" class="form-check-input" type="radio" name="date-privacy" value="non-private">
+            <label class="form-check-label" for="privacy">Non-private</label>
+          </div>
+        </div>
+      </div>
+      <input [(ngModel)]="date" type="date" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <div class="input-group-prepend">
+        <label for="name" class="float-left mr-5">DiseaseName</label>
+        <div class="float-right pull-right">
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="diseasenameprivacy" class="form-check-input float-right" type="radio" name="disease-name-privacy" value="private">
+            <label class="form-check-label" for="privacy">private</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="diseasenameprivacy" class="form-check-input" type="radio" name="disease-name-privacy" value="non-private">
+            <label class="form-check-label" for="privacy">Non-private</label>
+          </div>
+        </div>
+      </div>
+      <input [(ngModel)]="diseasename" class="form-control" type="text" name="name">
+    </div>
+
+    <div class="form-group">
+      <div class="input-group-prepend">
+        <label for="name" class="float-left mr-5">Symptoms</label>
+        <div class="float-right pull-right">
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="symptomsprivacy" class="form-check-input float-right" type="radio" name="symtoms-privacy" value="private">
+            <label class="form-check-label" for="privacy">private</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input [(ngModel)]="symptomsprivacy" class="form-check-input" type="radio" name="symptoms-privacy" value="non-private">
+            <label class="form-check-label" for="privacy">Non-private</label>
+          </div>
+        </div>
+      </div>
+      <input [(ngModel)]="symptoms" class="form-control" type="text" name="name">
+    </div>
+
+    <button (click)="addRecord()">Add Record</button>
+  </div>
+</div>
+

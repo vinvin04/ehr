@@ -1,0 +1,15 @@
+<p>showdetails works!</p>
+<div class="container">
+  <i class="fa fa-arrow-left" ></i>
+  <h3>Details of record are:</h3>
+  <div class="card record" style="width: 20rem; border-radius: 25px">
+    <div class="card-body" *ngIf="record">
+      <h5 class="card-title">Record Id: {{record.id}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">name : {{record.name}}</h6>
+      <p class="card-text">age : {{record.age}}</p>
+      <p class="card-text">gender : {{record.gender}}</p>
+      <p class="card-text">disease name : {{record.diseasename}}</p>
+      <p class="card-text">symptoms : {{record.symptoms}}</p>
+    </div>
+  </div>
+</div>

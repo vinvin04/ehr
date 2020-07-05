@@ -1,0 +1,76 @@
+<div class="container-fluid">
+  <div class="container">
+
+
+  </div>
+  <div >
+    <div class="row outer">
+      <div class="col-8">
+        <div class="row heading-row">
+          <h1>Your uploads</h1>
+        </div>
+        <div class="input-group-prepend">
+          <button style="padding-right:1rem" class="btn btn-primary" routerLink="/accessedrecords">Accessed</button>
+          <button class="btn btn-primary" routerLink="/addrecords">Add Record</button>
+        </div>
+        <div class="">
+
+        </div>
+        <div class="row">
+          <div *ngFor="let record of records">
+            <div class="card record" style="width: 20rem; border-radius: 25px">
+              <div class="card-body">
+                <h5 class="card-title">Record Id: {{record.id}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">name : {{record.name}}</h6>
+                <p class="card-text">age : {{record.age}}</p>
+                <p class="card-text">gender : {{record.gender}}</p>
+                <p class="card-text">disease name : {{record.diseasename}}</p>
+                <p class="card-text">symptoms : {{record.symptoms}}</p>
+                <a routerLink="/showdetails/{{record.id}}" class="card-link">Show Details</a>
+                <a routerLink="/editrecord/{{record.id}}" class="card-link"></a>
+                <a routerLink="/deleterecord/{{record.id}}" class="card-link">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      //blockchain for future
+      <!-- <div class="col-4">
+        <div>
+          <h5>Blocks</h5>
+        </div>
+        <div class="list-group outerblock">
+          <div *ngFor="let block of blocks">
+            <a  disabled="disabled" class="list-group-item list-group-item-action block">
+              <div class="d-flex w-100 justify-content-between">
+                <h4 class="mb-1">Block id : {{block.blockid}}</h4>
+              </div>
+              <p class="mb-1 justify-content-between">recordid : {{block.recordid}}</p>
+              <p class="mb-1 justify-content-between">hash : {{block.hash.substring(0,30)+'-'}}</p>
+              <p class="mb-1 justify-content-between">{{block.hash.substring(30)}}</p>
+              <p class="mb-1 justify-content-between">prev hash : {{block.prevhash.substring(0,30)+'-'}}</p>
+              <p class="mb-1 justify-content-between">{{block.prevhash.substring(30)}}</p>
+            </a>
+          </div>
+        </div>
+
+      </div> -->
+
+      <!-- <div class="col-4 ">
+        <div class="blockchain">
+          <div *ngFor="let block of blocks">
+            <div class=" block">
+              <h5 class="title">Block id : {{block.blockid}}</h5>
+              <p class="mb-1">recordid : {{block.recordid}}</p>
+              <p class="mb-1">hash : {{block.hash}}</p>
+              <p class="mb-1">prev hash : {{block.prevhash}}</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+

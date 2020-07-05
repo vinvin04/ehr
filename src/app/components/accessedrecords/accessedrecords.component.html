@@ -1,0 +1,54 @@
+<div class="outer">
+  <div class="row">
+    <div class="col-10">
+      <div class="row heading-row">
+        <h1>Your Accessed Records</h1>
+      </div>
+      <div class="row">
+        <div *ngFor="let record of records">
+          <div class="card record" style="width: 20rem; border-radius: 25px">
+            <div class="card-body">
+              <h5 class="card-title">Record Id: {{record.id}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">name : {{record.name}}</h6>
+              <p class="card-text">age : {{record.age}}</p>
+              <p class="card-text">gender : {{record.gender}}</p>
+              <p class="card-text">disease name : {{record.diseasename}}</p>
+              <p class="card-text">symptoms : {{record.symptoms}}</p>
+              <button class="btn btn-primary" (click)="verify(record.id)">Verify This Record</button>
+              <!-- < (click)="verify(record.id)" class="card-link">Verify This Record</a> -->
+              <!-- <a routerLink="/showdetails/{{record.id}}" class="card-link">Show Details</a>
+              <a routerLink="/editrecord/{{record.id}}" class="card-link">Edit</a>
+              <a routerLink="/deleterecord/{{record.id}}" class="card-link">Delete</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button trigger modal -->
+    <button type="button" id="verifymodalbtn" class="btn btn-primary" [hidden]="true" data-toggle="modal" data-target="#verifyModal">
+      Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="verifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Verified</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.record{
+  margin: 1.2rem;
+  padding: 10%;
+}
+.outer{
+  margin: 2rem;
+}
+.blockchain{
+  margin:1.2rem;
+  padding: 1.2rem;
+  border: solid;
+  border-radius: 0%;
+  border-color: black;
+}
+.block{
+  /* margin: 1.2rem; */
+  background-color:#42aaf5;
+  padding: 1.2rem;
+}
+.outerblock{
+  /* margin: 1.2rem; */
+}
