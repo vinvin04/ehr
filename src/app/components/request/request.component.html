@@ -1,0 +1,43 @@
+
+<div class="container">
+  <i class="fa fa-arrow-left" ></i>
+  <h3>Details of record are:</h3>
+  <div class="card record" style="width: 20rem; border-radius: 25px">
+    <div class="card-body" *ngIf="record">
+      <h5 class="card-title">Record Id: {{record.id}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">name : {{record.name}}</h6>
+      <p class="card-text">age : {{record.age}}</p>
+      <p class="card-text">gender : {{record.gender}}</p>
+      <p class="card-text">disease name : {{record.diseasename}}</p>
+      <p class="card-text">symptoms : {{record.symptoms}}</p>
+    </div>
+  </div>
+  <button (click)="request()" class="btn btn-primary">request More details</button>
+
+
+  <!-- Button trigger modal -->
+<button type="button" id="requestmodalbtn" class="btn btn-primary" [hidden]="true" data-toggle="modal" data-target="#requestModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Hello</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Request Sent Successfully
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

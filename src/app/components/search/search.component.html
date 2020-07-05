@@ -1,0 +1,85 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 mar">
+      <div class="row input-group">
+        <div class="col-4">
+          <label class="input-group-prepend" for="exampleFormControlSelect1">Search By</label>
+        </div>
+        <div class="col-8">
+          <select [(ngModel)]="sortby" class="form-control" id="exampleFormControlSelect1">
+            <option value="diseasename">Disease_Name</option>
+            <option value="symptoms">Symptoms</option>
+            <option value="id">Record-ID</option>
+            <option>recent</option>
+            <option>Older</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 mar">
+      <div class="input-group">
+
+        <input [(ngModel)]="searchtext" type="text" class="form-control" placeholder="Eg: Malaria" aria-label="Username" aria-describedby="basic-addon1">
+        <div class="input-group-prepend">
+          <span (click)="search()" class="input-group-text" id="basic-addon1">Search</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <!-- <div class="col-8 download">
+      Results
+    </div> -->
+    <button (click)="downloadcsv()" class="btn btn-primary download">download as csv</button>
+  </div>
+
+  <div>
+    <div class="container" >
+      <div class="list-group">
+        <div class="">
+          <div class="result col-10" *ngFor="let record of results">
+            <a class="result" routerLink="/recorddetails/{{record.id}}" class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Disease Name : {{record.diseasename}}</h5>
+              </div>
+              <p class="mb-1">Symptoms : {{record.symptoms}}</p>
+              <p class="mb-1">Uploaded On : {{record.date}}</p>
+            </a>
+          </div>
+          <div class="col-4">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <div class="row">
+      <div class="col-10">
+        <div class="row heading-row">
+          <h1>Search Results</h1>
+        </div>
+        <div class="row">
+          <div *ngFor="let record of records">
+            <div class="card record" style="width: 20rem; border-radius: 25px">
+              <div class="card-body">
+                <h5 class="card-title">Record Id: {{record.id}}</h5>
+                <h6 *ngIf="record.nameprivacy=='non-private'" class="card-subtitle mb-2 text-muted">name : {{record.name}}</h6>
+                <p *ngIf="record.ageprivacy=='non-private'" class="card-text">age : {{record.age}}</p>
+                <p *ngIf="record.genderprivacy=='non-private'" class="card-text">gender : {{record.gender}}</p>
+                <p *ngIf="record.diseasenameprivacy=='non-private'" class="card-text">disease name : {{record.diseasename}}</p>
+                <p *ngIf="record.symptomsprivacy=='non-private'" class="card-text">symptoms : {{record.symptoms}}</p>
+                <a routerLink="/requestdetails/{{record.id}}" class="card-link">Request Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
